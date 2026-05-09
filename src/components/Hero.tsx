@@ -1,12 +1,22 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { BadgeCheck, Clock, ShieldCheck, Phone, ArrowRight } from "lucide-react";
+import heroBgVideo from "@assets/hero-bg.mp4";
 
 export default function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center">
-      {/* Background gradient */}
-      <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(135deg, #0f1e3d 0%, #162E73 50%, #1a3a8a 100%)" }} />
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/55 z-10" />
+        <video
+          src={heroBgVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        />
+      </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-20">
         <div className="max-w-3xl mx-auto text-center">
